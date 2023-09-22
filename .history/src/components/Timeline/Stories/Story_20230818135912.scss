@@ -1,0 +1,18 @@
+.timeline__stories {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: 46px;
+  .timeline__storyUser {
+    margin-right: 10px;
+    .storyAvatar {
+      border-style: solid;
+      border-color: rgb(215, 0, 189) rgb(254, 102, 17) rgb(252, 59, 53)
+        rgb(250, 194, 0);
+    }
+    .storyUserName {
+      margin-left: 5px;
+    }
+  }
+}

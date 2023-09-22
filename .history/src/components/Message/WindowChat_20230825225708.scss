@@ -1,0 +1,13 @@
+.window-chat-wrapper {
+  margin: -620px 0 0 0px;
+  // width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .window-chat__left {
+    display: flex;
+    align-items: center;
+  }
+  .window-chat__right {
+  }
+}

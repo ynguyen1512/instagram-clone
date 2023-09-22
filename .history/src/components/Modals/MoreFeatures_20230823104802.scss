@@ -1,0 +1,40 @@
+.more-features-wrapper {
+  position: absolute;
+  background-color: #262626;
+  border-radius: 16px;
+  bottom: 0;
+  margin: 0 0 66px 10px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 60px;
+  width: 300px;
+  .more-features-buttons {
+    display: flex;
+    flex-direction: column;
+    .more-features__button {
+      color: #fff;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      background: 0;
+      border: 0;
+      margin: 5px 10px 5px 10px;
+      padding: 10px 15px 10px 15px;
+      width: 100%;
+      z-index: 5;
+      &:hover {
+        background-color: #353535;
+        padding-right: 60px;
+        border-radius: 5px;
+      }
+    }
+  }
+  //   .logout-btn {
+  //     border: none;
+  //     color: #fff;
+  //     background-color: #262626;
+  //     padding: 10px 15px 10px 15px;
+  //     border-radius: 16px;
+  //   }
+}

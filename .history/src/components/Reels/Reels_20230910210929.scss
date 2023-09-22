@@ -1,0 +1,12 @@
+.reels-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .reel-emotion {
+    display: flex;
+    flex-direction: column;
+    span {
+    }
+  }
+}

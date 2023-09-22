@@ -1,0 +1,28 @@
+.more-features-wrapper {
+  position: absolute;
+  background-color: #262626;
+  bottom: 0
+  margin-bottom: 20px;
+  .more-features-buttons {
+    display: flex;
+    flex-direction: column;
+    .more-features__button {
+      color: #fff;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background: 0;
+      border: 0;
+      margin: 5px 10px 5px 10px;
+      padding: 10px 15px 10px 15px;
+      border-radius: 15px;
+      width: 100%;
+      z-index: 5;
+    }
+  }
+  .logout-btn {
+    border: none;
+    background-color: #000;
+    color: #fff;
+  }
+}

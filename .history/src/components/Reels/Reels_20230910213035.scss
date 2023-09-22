@@ -1,0 +1,36 @@
+.reels-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  .reels-video {
+    margin-top: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .video {
+      width: 400px;
+      height: 640px;
+      border-radius: 10px;
+    }
+  }
+  .reel-emotion {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 300px;
+    margin-left: 500px;
+    margin-top: 360px;
+    .reel-emotion__item {
+      margin: 14px;
+      color: #fff;
+      width: 30px;
+      height: 30px;
+      opacity: 0.6;
+    }
+  }
+}

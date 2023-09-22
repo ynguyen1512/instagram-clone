@@ -1,0 +1,38 @@
+.explore-wrapper {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  // // flex-direction: column;
+  // // justify-content: center;
+  // display: grid;
+  // grid-template-columns: 0px 520px 1000px;
+  height: 100%;
+  position: relative;
+  .explore-left {
+    // flex: 0.3;
+  }
+  .explore-mid {
+    padding-left: 119px;
+    flex: 1;
+    overflow-y: auto;
+  }
+  .explore-right {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+    .img-container {
+      width: 100%;
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      transition: opacity 0.3s ease; /* Add a smooth transition for opacity */
+
+      &:hover {
+        /* Define the hover styles */
+        opacity: 0.8; /* Example: Reduce opacity on hover */
+        /* Add any other styles you want for the hover effect */
+      }
+    }
+  }
+}

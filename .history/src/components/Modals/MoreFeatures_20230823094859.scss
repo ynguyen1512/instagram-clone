@@ -1,0 +1,12 @@
+.more-features-wrapper {
+  background-color: #000;
+  .more-features-buttons {
+    display: flex;
+
+    flex-direction: column;
+    .more-features__button {
+      border: none;
+      background-color: #000;
+    }
+  }
+}

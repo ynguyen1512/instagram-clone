@@ -1,0 +1,23 @@
+.timeline {
+  display: flex;
+  flex-direction: row;
+  .timeline__left {
+    flex: 0.7;
+    .timeline__stories {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .timeline__storyUser {
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        .storyUserName {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  .timeline__right {
+    flex: 0.3;
+  }
+}

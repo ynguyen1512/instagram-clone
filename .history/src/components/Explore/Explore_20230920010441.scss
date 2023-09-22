@@ -1,0 +1,40 @@
+...
+.explore-img__row {
+  .image-container {
+    position: relative;
+
+    img {
+      width: 380px;
+      height: 450px;
+      margin-bottom: 10px;
+      object-fit: cover;
+      margin-left: 10px;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .image-overlay {
+      display: none; 
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); // A semi-transparent black background
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-icon {
+      margin: 5px;
+      color: white; // Icon color
+    }
+
+    &:hover .image-overlay {
+      display: flex;
+    }
+  }
+}
+...

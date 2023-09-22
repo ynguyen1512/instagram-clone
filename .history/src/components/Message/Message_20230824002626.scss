@@ -1,0 +1,14 @@
+.message-wrapper {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 200px;
+  .message-left {
+  }
+  .message-right {
+    display: flex;
+    flex-direction: column;
+  }
+}

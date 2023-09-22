@@ -1,0 +1,38 @@
+.profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  // margin-right: 20px;
+  .profile__wrapper {
+    display: flex;
+    align-items: center;
+    .profile__avt {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .profile__info {
+      display: flex;
+      flex-direction: column;
+      .profile__userName {
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .profile__desc {
+        color: #ccc;
+        font-size: 12px;
+      }
+    }
+  }
+  .switch-btn {
+    color: #0095f6;
+    font-weight: bold;
+    background: 0;
+    border: 0;
+    font-size: 12px;
+    &:hover {
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}

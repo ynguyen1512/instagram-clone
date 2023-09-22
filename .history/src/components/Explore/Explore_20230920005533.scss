@@ -1,0 +1,37 @@
+.explore-wrapper {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  // // flex-direction: column;
+  // // justify-content: center;
+  // display: grid;
+  // grid-template-columns: 0px 520px 1000px;
+  height: 100%;
+  position: relative;
+  .explore-left {
+    // flex: 0.3;
+  }
+  .explore-mid {
+    padding-left: 119px;
+    flex: 1;
+    overflow-y: auto;
+  }
+  .explore-right {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    .explore-img-wrapper {
+      display: flex;
+      // flex-direction: column;
+      .explore-img__row {
+        img {
+          width: 300px;
+          height: 350px;
+          margin-bottom: 20px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

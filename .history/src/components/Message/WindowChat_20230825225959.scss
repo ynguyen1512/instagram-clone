@@ -1,0 +1,17 @@
+.window-chat-wrapper {
+  margin: -660px 0 0 0px;
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  .window-chat__left {
+    display: flex;
+    align-items: center;
+    margin-right: 800px;
+  }
+  .window-chat__right {
+    .window-chat__icon {
+      font-size: 30px;
+      margin-right: 6px;
+    }
+  }
+}

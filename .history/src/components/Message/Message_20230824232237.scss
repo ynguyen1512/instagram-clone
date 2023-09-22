@@ -1,0 +1,20 @@
+.message-wrapper {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  .message-left {
+    flex: 0.3;
+  }
+  .message-right {
+    // margin: 400px;
+    display: flex;
+    flex-direction: column;
+
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
