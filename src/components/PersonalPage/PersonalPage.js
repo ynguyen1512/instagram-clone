@@ -89,26 +89,32 @@ function PersonalPage() {
               className={toggleTab === 1 ? "content active-content" : "content"}
             >
               <img
+                alt="tab-img"
                 className="tabs__img"
                 src="https://www.cnet.com/a/img/resize/fef6e6caaf32fa14adcfb6c7f38b5d6a2706457e/hub/2022/09/30/7c1ef7f1-61b1-4ab5-ac69-6788aa6ee379/2023-audi-r8-gt-rwd-045.jpg?auto=webp&width=1920"
               />
               <img
+                alt="tab-img"
                 className="tabs__img"
                 src="https://www.audi.com/content/dam/gbp2/company/profile/participations-and-services/1920x1080-participations-services.jpg?imwidth=719&imdensity=1"
               />
               <img
+                alt="tab-img"
                 className="tabs__img"
                 src="https://cdn.tuoitre.vn/thumb_w/640/2022/10/4/2023-audi-audi-r8-v10-gt-rwd-27-1664874783402564907144.jpeg"
               />
               <img
+                alt="tab-img"
                 className="tabs__img"
                 src="https://mediaservice.audi.com/media/live/50900/fly1400x601n1/f83rj7/2022.png?wid=850"
               />
               <img
+                alt="tab-img"
                 className="tabs__img"
                 src="https://www.autopediame.com/storage/images/Audi/Audi%20A7%20Black%20Edition%201.jpg"
               />
               <img
+                alt="tab-img"
                 className="tabs__img"
                 src="https://www.formulaimports.com/imagetag/2572/main/l/Used-2019-Audi-RS-5-Sportback-29T-QUATTRO-BLACK-OPTIC-CARBON-FIBER-NAPPA-LEATHER-DYNAMIC-PLUS.jpg"
               />

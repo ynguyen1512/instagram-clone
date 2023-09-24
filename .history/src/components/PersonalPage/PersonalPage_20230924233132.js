@@ -8,6 +8,7 @@ import PersonPinOutlinedIcon from "@mui/icons-material/PersonPinOutlined";
 import { useState } from "react";
 import PhotoCameraFrontOutlinedIcon from "@mui/icons-material/PhotoCameraFrontOutlined";
 import { Helmet } from "react-helmet";
+import avt from "../../assets/img/jason.jpg";
 
 function PersonalPage() {
   const [toggleTab, setToggleTab] = useState(1);
@@ -28,10 +29,7 @@ function PersonalPage() {
           <Navigation />
         </div>
         <div className="personal-right">
-          <Avatar
-            className="personal__avt"
-            src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/354248193_1591789207975129_61096347069742372_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=UxIWDNDYSwEAX8ua81D&_nc_ht=scontent.fsgn2-6.fna&oh=00_AfA8BIsTxtN2eZZ5KIDG0jj-kknQHIW6OnHrpTeake6OZg&oe=64E5CF72"
-          />
+          <Avatar className="personal__avt" src={avt} />
 
           <div className="personal-info-wrapper">
             <div className="personal-row1">
@@ -91,26 +89,32 @@ function PersonalPage() {
               className={toggleTab === 1 ? "content active-content" : "content"}
             >
               <img
+                alt="tab-img"
                 className="tabs__img"
                 src="https://www.cnet.com/a/img/resize/fef6e6caaf32fa14adcfb6c7f38b5d6a2706457e/hub/2022/09/30/7c1ef7f1-61b1-4ab5-ac69-6788aa6ee379/2023-audi-r8-gt-rwd-045.jpg?auto=webp&width=1920"
               />
               <img
+                alt="tab-img"
                 className="tabs__img"
                 src="https://www.audi.com/content/dam/gbp2/company/profile/participations-and-services/1920x1080-participations-services.jpg?imwidth=719&imdensity=1"
               />
               <img
+                alt="tab-img"
                 className="tabs__img"
                 src="https://cdn.tuoitre.vn/thumb_w/640/2022/10/4/2023-audi-audi-r8-v10-gt-rwd-27-1664874783402564907144.jpeg"
               />
               <img
+                alt="tab-img"
                 className="tabs__img"
                 src="https://mediaservice.audi.com/media/live/50900/fly1400x601n1/f83rj7/2022.png?wid=850"
               />
               <img
+                alt="tab-img"
                 className="tabs__img"
                 src="https://www.autopediame.com/storage/images/Audi/Audi%20A7%20Black%20Edition%201.jpg"
               />
               <img
+                alt="tab-img"
                 className="tabs__img"
                 src="https://www.formulaimports.com/imagetag/2572/main/l/Used-2019-Audi-RS-5-Sportback-29T-QUATTRO-BLACK-OPTIC-CARBON-FIBER-NAPPA-LEATHER-DYNAMIC-PLUS.jpg"
               />
