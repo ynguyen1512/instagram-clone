@@ -2,7 +2,6 @@ import { NavLink } from "react-bootstrap";
 import "./Login.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link, useNavigate } from "react-router-dom";
-// import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import { auth } from "../../firebase";
 import { useEffect, useState } from "react";
