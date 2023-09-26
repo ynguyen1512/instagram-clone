@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet";
 import Navigation from "../Navigation/Navigation";
 import Timeline from "../Timeline/Timeline";
 import "./HomePage.scss";
-import { useState } from "react";
 
 const HomePage = () => {
   return (

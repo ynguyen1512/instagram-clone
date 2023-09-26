@@ -5,6 +5,8 @@ import "firebase/compat/auth";
 import { auth } from "../../firebase";
 import "./Signup.scss";
 import { useState } from "react";
+
+import screenshot5 from "../../assets/img/screenshot5.png";
 import screenshot2 from "../../assets/img/screenshot2.png";
 import screenshot3 from "../../assets/img/screenshot3.png";
 
