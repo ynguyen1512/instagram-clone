@@ -10,12 +10,33 @@ import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { More } from "@mui/icons-material";
-import MoreFeatures from "../Modals/MoreFeatures";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import ModalCreatePost from "../Modals/ModalCreatePost";
+import { toast } from "react-toastify";
+import MoreFeatures from "../Modals/MoreFeatures";
 
-const Navigation = ({ isMessageView }) => {
+const Navigation = (props) => {
+  const { isMessageView } = props;
   const [isMoreVisible, setIsMoreVisible] = useState(false);
+  const [showModalCreatePost, setShowModalCreatePost] = useState(false);
+  const [showSearchBar, setShowSearchBar] = useState(false);
+  // const { show, setShow } = props;
+  // const { setIsSearchVisible, isSearchVisible } = props;
+
+  // const handleShow = () => setShow(true);
+
+  const handleSearch = () => {
+    toast.error("This feature is in development");
+  };
+
+  const handleNotification = () => {
+    toast.error("This feature is in development");
+  };
+
+  // const handleClose = () => {
+  //   setShow(false);
+  // };
+
   const navigate = useNavigate();
   const handleOnClick = () => {
     navigate("/");
@@ -27,10 +48,37 @@ const Navigation = ({ isMessageView }) => {
   const handleMessageClick = () => {
     navigate("/inbox");
   };
+  const handleNavigateExplore = () => {
+    navigate("/explore");
+  };
+  const handleNavigateReels = () => {
+    navigate("/reels");
+  };
+
+  // const handleNavigateSearch = () => {
+  //   navigate("/search");
+  // };
+
+  // const handleShowSearchBar = () => {
+  //   setShowSearchBar(true);
+  // };
   return (
     <div className="sidenav">
+      {/* Search start */}
+      {/* {showSearchBar && (
+        <Search
+          setShowSearchBar={setShowSearchBar}
+          showSearchBar={showSearchBar}
+        />
+      )} */}
+
+      {/* Search end */}
       {isMessageView ? (
-        <InstagramIcon className="sidenav__logo" onClick={handleOnClick} />
+        <InstagramIcon
+          className="sidenav__logo"
+          onClick={handleOnClick}
+          style={{ width: "32px", height: "32px" }}
+        />
       ) : (
         <svg
           aria-label="Instagram"
@@ -54,19 +102,24 @@ const Navigation = ({ isMessageView }) => {
       )}
 
       <div className="sidenav__buttons">
-        <button onClick={() => handleOnClick()} className="sidenav__button">
+        <button onClick={handleOnClick} className="sidenav__button">
           <HomeIcon className="sidenav__icon" />
           {isMessageView ? null : <span>Home</span>}
         </button>
-        <button className="sidenav__button">
+        <button
+          className="sidenav__button"
+          onClick={handleSearch}
+          // onClick={() => setShowSearchBar((prevState) => !prevState)}
+        >
           <SearchIcon className="sidenav__icon" />
           {isMessageView ? null : <span>Search</span>}
         </button>
-        <button className="sidenav__button">
+
+        <button className="sidenav__button" onClick={handleNavigateExplore}>
           <ExploreOutlinedIcon className="sidenav__icon" />
           {isMessageView ? null : <span>Explore</span>}
         </button>
-        <button className="sidenav__button">
+        <button className="sidenav__button" onClick={handleNavigateReels}>
           <SlowMotionVideoOutlinedIcon className="sidenav__icon" />
           {isMessageView ? null : <span>Reels</span>}
         </button>
@@ -74,11 +127,14 @@ const Navigation = ({ isMessageView }) => {
           <SendOutlinedIcon className="sidenav__icon" />
           {isMessageView ? null : <span>Messages</span>}
         </button>
-        <button className="sidenav__button">
+        <button className="sidenav__button" onClick={handleNotification}>
           <FavoriteBorderOutlinedIcon className="sidenav__icon" />
           {isMessageView ? null : <span>Notifications</span>}
         </button>
-        <button className="sidenav__button">
+        <button
+          className="sidenav__button"
+          onClick={() => setShowModalCreatePost(true)}
+        >
           <AddBoxOutlinedIcon className="sidenav__icon" />
           {isMessageView ? null : <span>Create</span>}
         </button>
@@ -90,6 +146,10 @@ const Navigation = ({ isMessageView }) => {
           {isMessageView ? null : <span>More</span>}
         </button>
       </div>
+      <ModalCreatePost
+        show={showModalCreatePost}
+        setShow={setShowModalCreatePost}
+      />
     </div>
   );
 };

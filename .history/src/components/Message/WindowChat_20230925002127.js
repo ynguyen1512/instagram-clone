@@ -2,8 +2,20 @@ import { Avatar } from "@mui/material";
 import "./WindowChat.scss";
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import {
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBCard,
+  MDBCardHeader,
+  MDBCardBody,
+  MDBCardFooter,
+  MDBIcon,
+  MDBBtn,
+  MDBScrollbar,
+} from "mdb-react-ui-kit";
 
-function WindowChat() {
+function WindowChat({ selectedUser, onClose }) {
   const [inputValue, setInputValue] = useState("");
   const handleInputChange = (e) => {
     setInputValue(e.target.value);

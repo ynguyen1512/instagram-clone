@@ -3,6 +3,7 @@ import { Avatar } from "@mui/material";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 
 const Search = (props) => {
+  const { setShowSearchBar } = props;
   return (
     <div className="search-wrapper">
       <div className="search-title">

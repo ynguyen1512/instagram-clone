@@ -1,1 +1,0 @@
-import "./WindowChat.scss";

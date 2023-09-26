@@ -3,7 +3,7 @@ import "./WindowChat.scss";
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 
-function WindowChat() {
+function WindowChat({ selectedUser, onClose }) {
   const [inputValue, setInputValue] = useState("");
   const handleInputChange = (e) => {
     setInputValue(e.target.value);

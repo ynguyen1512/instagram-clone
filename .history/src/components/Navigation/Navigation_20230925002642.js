@@ -13,7 +13,6 @@ import { useState } from "react";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ModalCreatePost from "../Modals/ModalCreatePost";
 import { toast } from "react-toastify";
-import MoreFeatures from "../Modals/MoreFeatures";
 
 const Navigation = (props) => {
   const { isMessageView } = props;

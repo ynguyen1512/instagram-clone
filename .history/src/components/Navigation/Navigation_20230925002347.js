@@ -10,20 +10,21 @@ import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import MoreFeatures from "../Modals/MoreFeatures";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ModalCreatePost from "../Modals/ModalCreatePost";
+import Search from "../Search/Search";
 import { toast } from "react-toastify";
-import MoreFeatures from "../Modals/MoreFeatures";
 
 const Navigation = (props) => {
   const { isMessageView } = props;
   const [isMoreVisible, setIsMoreVisible] = useState(false);
   const [showModalCreatePost, setShowModalCreatePost] = useState(false);
   const [showSearchBar, setShowSearchBar] = useState(false);
-  // const { show, setShow } = props;
-  // const { setIsSearchVisible, isSearchVisible } = props;
+  const { show, setShow } = props;
+  const { setIsSearchVisible, isSearchVisible } = props;
 
-  // const handleShow = () => setShow(true);
+  const handleShow = () => setShow(true);
 
   const handleSearch = () => {
     toast.error("This feature is in development");
@@ -33,9 +34,9 @@ const Navigation = (props) => {
     toast.error("This feature is in development");
   };
 
-  // const handleClose = () => {
-  //   setShow(false);
-  // };
+  const handleClose = () => {
+    setShow(false);
+  };
 
   const navigate = useNavigate();
   const handleOnClick = () => {
@@ -55,13 +56,13 @@ const Navigation = (props) => {
     navigate("/reels");
   };
 
-  // const handleNavigateSearch = () => {
-  //   navigate("/search");
-  // };
+  const handleNavigateSearch = () => {
+    navigate("/search");
+  };
 
-  // const handleShowSearchBar = () => {
-  //   setShowSearchBar(true);
-  // };
+  const handleShowSearchBar = () => {
+    setShowSearchBar(true);
+  };
   return (
     <div className="sidenav">
       {/* Search start */}
