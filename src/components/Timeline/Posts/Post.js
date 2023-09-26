@@ -25,7 +25,7 @@ const Post = ({ user, postImage, like, timestamp }) => {
         <MoreHorizOutlinedIcon />
       </div>
       <div className="post__image">
-        <img src={postImage} />
+        <img src={postImage} alt="post-img" />
       </div>
       <div className="post__footer">
         <div className="post__footerIcons">

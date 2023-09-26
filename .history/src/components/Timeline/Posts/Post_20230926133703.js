@@ -5,8 +5,13 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
 import ModeCommentOutlinedIcon from "@mui/icons-material/ModeCommentOutlined";
-
+import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
+import BookmarkOutlinedIcon from "@mui/icons-material/BookmarkOutlined";
+import { useState } from "react";
 const Post = ({ user, postImage, like, timestamp }) => {
+  const [isHoveredLike, setIsHoveredLike] = useState(false);
+  const [isHoveredSave, setIsHoveredSave] = useState(false);
+
   return (
     <div className="post">
       <div className="post__header">
@@ -20,17 +25,39 @@ const Post = ({ user, postImage, like, timestamp }) => {
         <MoreHorizOutlinedIcon />
       </div>
       <div className="post__image">
-        <img src={postImage} />
+        <img src={postImage} alt="post-img" />
       </div>
       <div className="post__footer">
         <div className="post__footerIcons">
           <div className="post__iconsMain">
-            <FavoriteBorderOutlinedIcon className="postIcon favoriteIcon" />
+            {isHoveredLike ? (
+              <FavoriteOutlinedIcon
+                style={{ color: "red" }}
+                className="postIcon favoriteIcon"
+                onClick={() => setIsHoveredLike(!isHoveredLike)}
+              />
+            ) : (
+              <FavoriteBorderOutlinedIcon
+                className="postIcon favoriteIcon"
+                onClick={() => setIsHoveredLike(!isHoveredLike)}
+              />
+            )}
+
             <ModeCommentOutlinedIcon className="postIcon" />
             <SendOutlinedIcon className="postIcon" />
           </div>
           <div className="post__iconSave">
-            <BookmarkBorderOutlinedIcon className="postIcon" />
+            {isHoveredSave ? (
+              <BookmarkOutlinedIcon
+                className="postIcon"
+                onClick={() => setIsHoveredSave(!isHoveredSave)}
+              />
+            ) : (
+              <BookmarkBorderOutlinedIcon
+                className="postIcon"
+                onClick={() => setIsHoveredSave(!isHoveredSave)}
+              />
+            )}
           </div>
         </div>
         Liked by {like} people.
