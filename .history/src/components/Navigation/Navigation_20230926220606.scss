@@ -1,0 +1,101 @@
+@import "../../Base.scss";
+.sidenav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  // position: relative;
+  border-right: 1px solid #262626;
+  height: 100vh;
+}
+.sidenav__logo--small {
+  // width: 120px;
+  font-size: 33px;
+  margin: 25px;
+  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.sidenav__logo--large {
+  // width: 120px;
+  font-size: 33px;
+  margin: 25px;
+  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.sidenav__buttons {
+  display: flex;
+  flex-direction: column;
+  .sidenav__button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    background: 0;
+    border: 0;
+    margin: 5px 10px 5px 10px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 15px;
+    // width: 200px;
+    // padding-right: 140px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.128);
+    }
+    span {
+      font-size: 16px;
+      margin-left: 12px;
+    }
+    .sidenav__icon {
+      font-size: 33px;
+    }
+  }
+}
+
+.sidenav__more {
+  position: fixed;
+  bottom: 3px;
+  padding: 10px;
+  margin: 10px;
+  .sidenav__button {
+    background: 0;
+    display: flex;
+    align-items: center;
+    border: 0;
+    color: #fff;
+    span {
+      margin-left: 10px;
+    }
+  }
+  &:hover {
+    background-color: #262626;
+    border-radius: 10px;
+  }
+  .sidenav__icon {
+    font-size: 33px;
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .sidenav {
+    .sidenav__logo {
+      &.small {
+        display: block; // Show the small logo
+      }
+      &:not(.small) {
+        display: none; // Hide the regular logo
+      }
+    }
+    .sidenav__buttons {
+      .sidenav__button {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}

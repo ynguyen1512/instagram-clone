@@ -1,0 +1,79 @@
+.explore-wrapper {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  // // flex-direction: column;
+  // // justify-content: center;
+  // display: grid;
+  // grid-template-columns: 0px 520px 1000px;
+  height: 100%;
+  position: relative;
+  .explore-left {
+    // flex: 0.3;
+  }
+  .explore-mid {
+    padding-left: 119px;
+    flex: 1;
+    overflow-y: auto;
+  }
+  .explore-right {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    .explore-img-wrapper {
+      display: flex;
+      // flex-direction: column;
+      .explore-img__row {
+        .image-container {
+          position: relative;
+
+          img {
+            width: 380px;
+            height: 450px;
+            margin-bottom: 10px;
+            object-fit: cover;
+            margin-left: 10px;
+            transition: opacity 0.3s ease; // smoothens the hover effect
+          }
+
+          .hover-icons {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            span {
+              font-weight: bold;
+            }
+          }
+
+          .image-icon {
+            margin: 5px;
+            color: white; // Icon color
+            transition: 0.3s; // optional, for any hover effects you'd want on icons
+          }
+
+          &:hover {
+            img {
+              opacity: 0.7;
+              cursor: pointer;
+            }
+            .hover-icons {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-medium) {
+  .explore-right {
+    width: 200px;
+  }
+}
