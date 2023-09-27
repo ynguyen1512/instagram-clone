@@ -8,9 +8,9 @@ import PersonPinOutlinedIcon from "@mui/icons-material/PersonPinOutlined";
 import { useState } from "react";
 import PhotoCameraFrontOutlinedIcon from "@mui/icons-material/PhotoCameraFrontOutlined";
 import { Helmet } from "react-helmet";
-import avt from "../../assets/img/jason.jpg";
+import avt from "../../assets/img/mer-avt.jpg";
 
-function PersonalPage({ currentUser }) {
+function MercedesPage({ currentUser }) {
   const [toggleTab, setToggleTab] = useState(1);
 
   const handleToggleTab = (index) => {
@@ -34,7 +34,7 @@ function PersonalPage({ currentUser }) {
           <div className="personal-info-wrapper">
             <div className="personal-row1">
               <div className="personal-info">
-                <span className="personal__name">ynguyen.11</span>
+                <span className="personal__name">mercedesbenz</span>
                 <button className="personal__edit-btn">Edit profile</button>
                 <button className="personal__view-btn">View Archive</button>
               </div>
@@ -52,7 +52,7 @@ function PersonalPage({ currentUser }) {
               </span>
             </div>
             <div className="personal-row3">
-              <span className="personal__name">Y Nguyen</span>
+              <span className="personal__name">Mercedes Benz</span>
             </div>
           </div>
           {/* Post, saved, tagged */}
@@ -142,4 +142,4 @@ function PersonalPage({ currentUser }) {
   );
 }
 
-export default PersonalPage;
+export default MercedesPage;

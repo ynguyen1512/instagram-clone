@@ -10,7 +10,7 @@ import PhotoCameraFrontOutlinedIcon from "@mui/icons-material/PhotoCameraFrontOu
 import { Helmet } from "react-helmet";
 import avt from "../../assets/img/jason.jpg";
 
-function PersonalPage({ currentUser }) {
+function AudiPage() {
   const [toggleTab, setToggleTab] = useState(1);
 
   const handleToggleTab = (index) => {
@@ -22,7 +22,7 @@ function PersonalPage({ currentUser }) {
       <div className="personal-wrapper">
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Y Nguyen (@ynguyen.11)</title>
+          <title>Audi (@audicars)</title>
           <link rel="canonical" href="http://mysite.com/example" />
         </Helmet>
         <div className="personal-left">
@@ -34,7 +34,7 @@ function PersonalPage({ currentUser }) {
           <div className="personal-info-wrapper">
             <div className="personal-row1">
               <div className="personal-info">
-                <span className="personal__name">ynguyen.11</span>
+                <span className="personal__name">audicars</span>
                 <button className="personal__edit-btn">Edit profile</button>
                 <button className="personal__view-btn">View Archive</button>
               </div>
@@ -42,17 +42,17 @@ function PersonalPage({ currentUser }) {
             </div>
             <div className="personal-row2">
               <span className="personal__post">
-                <span>0</span> posts
+                <span>8</span> posts
               </span>
               <span className="personal__followers">
-                <span>42</span> followers
+                <span>11.3M</span> followers
               </span>
               <span className="personal__following">
-                <span>79</span> following
+                <span>0</span> following
               </span>
             </div>
             <div className="personal-row3">
-              <span className="personal__name">Y Nguyen</span>
+              <span className="personal__name">Audi Cars</span>
             </div>
           </div>
           {/* Post, saved, tagged */}
@@ -142,4 +142,4 @@ function PersonalPage({ currentUser }) {
   );
 }
 
-export default PersonalPage;
+export default AudiPage;

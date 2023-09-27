@@ -18,7 +18,7 @@ const Post = ({ user, postImage, like, timestamp, avt }) => {
       navigate("/mercedes");
     } else if (user === "audi" || user === "audi_official") {
       navigate("/audi");
-    } else if (user === "volvocars") {
+    } else if (user === "volvo") {
       navigate("/volvo");
     } else if (user === "porsche") {
       navigate("/porsche");

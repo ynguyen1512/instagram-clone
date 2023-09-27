@@ -8,9 +8,15 @@ import PersonPinOutlinedIcon from "@mui/icons-material/PersonPinOutlined";
 import { useState } from "react";
 import PhotoCameraFrontOutlinedIcon from "@mui/icons-material/PhotoCameraFrontOutlined";
 import { Helmet } from "react-helmet";
-import avt from "../../assets/img/jason.jpg";
+import avt from "../../assets/img/mer-avt.jpg";
+import mer1 from "../../assets/img/mer1.avif";
+import mer2 from "../../assets/img/mer2.jpg";
+import mer3 from "../../assets/img/mer3.jpg";
+import mer4 from "../../assets/img/mer4.avif";
+import mer5 from "../../assets/img/mer5.jpg";
+import mer6 from "../../assets/img/mer6.webp";
 
-function PersonalPage({ currentUser }) {
+function MercedesPage() {
   const [toggleTab, setToggleTab] = useState(1);
 
   const handleToggleTab = (index) => {
@@ -34,7 +40,7 @@ function PersonalPage({ currentUser }) {
           <div className="personal-info-wrapper">
             <div className="personal-row1">
               <div className="personal-info">
-                <span className="personal__name">ynguyen.11</span>
+                <span className="personal__name">mercedesbenz</span>
                 <button className="personal__edit-btn">Edit profile</button>
                 <button className="personal__view-btn">View Archive</button>
               </div>
@@ -45,14 +51,14 @@ function PersonalPage({ currentUser }) {
                 <span>0</span> posts
               </span>
               <span className="personal__followers">
-                <span>42</span> followers
+                <span>4.1M</span> followers
               </span>
               <span className="personal__following">
                 <span>79</span> following
               </span>
             </div>
             <div className="personal-row3">
-              <span className="personal__name">Y Nguyen</span>
+              <span className="personal__name">Mercedes Benz</span>
             </div>
           </div>
           {/* Post, saved, tagged */}
@@ -88,35 +94,31 @@ function PersonalPage({ currentUser }) {
             <div
               className={toggleTab === 1 ? "content active-content" : "content"}
             >
-              <img
-                alt="tab-img1"
-                className="tabs__img"
-                src="https://www.cnet.com/a/img/resize/fef6e6caaf32fa14adcfb6c7f38b5d6a2706457e/hub/2022/09/30/7c1ef7f1-61b1-4ab5-ac69-6788aa6ee379/2023-audi-r8-gt-rwd-045.jpg?auto=webp&width=1920"
-              />
+              <img alt="tab-img1" className="tabs__img" src={mer1} />
               <img
                 alt="tab-img2"
                 className="tabs__img"
-                src="https://www.audi.com/content/dam/gbp2/company/profile/participations-and-services/1920x1080-participations-services.jpg?imwidth=719&imdensity=1"
+                src="https://www.mercedes-benz.ie/content/ireland/en/passengercars/_jcr_content/root/responsivegrid/simple_stage.component.damq1.3385018336166.jpg/mercedes-amg-gt-c192-pad-stage-3840x3840-06-2023.jpg"
               />
               <img
                 alt="tab-img3"
                 className="tabs__img"
-                src="https://cdn.tuoitre.vn/thumb_w/640/2022/10/4/2023-audi-audi-r8-v10-gt-rwd-27-1664874783402564907144.jpeg"
+                src="https://car-images.bauersecure.com/wp-images/13349/80-mercedes-amg-gt63-e-performance-hero.jpg"
               />
               <img
                 alt="tab-img4"
                 className="tabs__img"
-                src="https://mediaservice.audi.com/media/live/50900/fly1400x601n1/f83rj7/2022.png?wid=850"
+                src="https://www.topgear.com/sites/default/files/2023/07/1%20Mercedes%20CLE%20Coupe.jpg"
               />
               <img
                 alt="tab-img5"
                 className="tabs__img"
-                src="https://www.autopediame.com/storage/images/Audi/Audi%20A7%20Black%20Edition%201.jpg"
+                src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202302/202302230723-main-sixteen_nine.jpg?size=948:533"
               />
               <img
                 alt="tab-img6"
                 className="tabs__img"
-                src="https://www.formulaimports.com/imagetag/2572/main/l/Used-2019-Audi-RS-5-Sportback-29T-QUATTRO-BLACK-OPTIC-CARBON-FIBER-NAPPA-LEATHER-DYNAMIC-PLUS.jpg"
+                src="https://www.carscoops.com/wp-content/uploads/2023/02/2022-Mercedes-CLS-1024x576.jpg"
               />
             </div>
             <div
@@ -142,4 +144,4 @@ function PersonalPage({ currentUser }) {
   );
 }
 
-export default PersonalPage;
+export default MercedesPage;

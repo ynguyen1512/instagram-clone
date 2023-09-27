@@ -16,9 +16,9 @@ const Post = ({ user, postImage, like, timestamp, avt }) => {
   const handleOnClick = (user) => {
     if (user === "mercedesbenz") {
       navigate("/mercedes");
-    } else if (user === "audi" || user === "audi_official") {
+    } else if (user === "audi") {
       navigate("/audi");
-    } else if (user === "volvocars") {
+    } else if (user === "volvo") {
       navigate("/volvo");
     } else if (user === "porsche") {
       navigate("/porsche");

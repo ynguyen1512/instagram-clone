@@ -8,9 +8,15 @@ import PersonPinOutlinedIcon from "@mui/icons-material/PersonPinOutlined";
 import { useState } from "react";
 import PhotoCameraFrontOutlinedIcon from "@mui/icons-material/PhotoCameraFrontOutlined";
 import { Helmet } from "react-helmet";
-import avt from "../../assets/img/jason.jpg";
+import avt from "../../assets/img/Porsche-Logo.png";
+import porsche1 from "../../assets/img/porsche1.jpg";
+import porsche2 from "../../assets/img/porsche2.jpg";
+import porsche3 from "../../assets/img/porsche3.jpg";
+import porsche4 from "../../assets/img/porsche4.webp";
+import porsche5 from "../../assets/img/porsche5.jpg";
+import porsche6 from "../../assets/img/porsche6.jpeg";
 
-function PersonalPage({ currentUser }) {
+function PorschePage() {
   const [toggleTab, setToggleTab] = useState(1);
 
   const handleToggleTab = (index) => {
@@ -22,7 +28,7 @@ function PersonalPage({ currentUser }) {
       <div className="personal-wrapper">
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Y Nguyen (@ynguyen.11)</title>
+          <title>Porsche (@porschecars)</title>
           <link rel="canonical" href="http://mysite.com/example" />
         </Helmet>
         <div className="personal-left">
@@ -34,7 +40,7 @@ function PersonalPage({ currentUser }) {
           <div className="personal-info-wrapper">
             <div className="personal-row1">
               <div className="personal-info">
-                <span className="personal__name">ynguyen.11</span>
+                <span className="personal__name">porschecars</span>
                 <button className="personal__edit-btn">Edit profile</button>
                 <button className="personal__view-btn">View Archive</button>
               </div>
@@ -42,17 +48,17 @@ function PersonalPage({ currentUser }) {
             </div>
             <div className="personal-row2">
               <span className="personal__post">
-                <span>0</span> posts
+                <span>8</span> posts
               </span>
               <span className="personal__followers">
-                <span>42</span> followers
+                <span>7.6M</span> followers
               </span>
               <span className="personal__following">
-                <span>79</span> following
+                <span>0</span> following
               </span>
             </div>
             <div className="personal-row3">
-              <span className="personal__name">Y Nguyen</span>
+              <span className="personal__name">Porsche Cars</span>
             </div>
           </div>
           {/* Post, saved, tagged */}
@@ -88,36 +94,12 @@ function PersonalPage({ currentUser }) {
             <div
               className={toggleTab === 1 ? "content active-content" : "content"}
             >
-              <img
-                alt="tab-img1"
-                className="tabs__img"
-                src="https://www.cnet.com/a/img/resize/fef6e6caaf32fa14adcfb6c7f38b5d6a2706457e/hub/2022/09/30/7c1ef7f1-61b1-4ab5-ac69-6788aa6ee379/2023-audi-r8-gt-rwd-045.jpg?auto=webp&width=1920"
-              />
-              <img
-                alt="tab-img2"
-                className="tabs__img"
-                src="https://www.audi.com/content/dam/gbp2/company/profile/participations-and-services/1920x1080-participations-services.jpg?imwidth=719&imdensity=1"
-              />
-              <img
-                alt="tab-img3"
-                className="tabs__img"
-                src="https://cdn.tuoitre.vn/thumb_w/640/2022/10/4/2023-audi-audi-r8-v10-gt-rwd-27-1664874783402564907144.jpeg"
-              />
-              <img
-                alt="tab-img4"
-                className="tabs__img"
-                src="https://mediaservice.audi.com/media/live/50900/fly1400x601n1/f83rj7/2022.png?wid=850"
-              />
-              <img
-                alt="tab-img5"
-                className="tabs__img"
-                src="https://www.autopediame.com/storage/images/Audi/Audi%20A7%20Black%20Edition%201.jpg"
-              />
-              <img
-                alt="tab-img6"
-                className="tabs__img"
-                src="https://www.formulaimports.com/imagetag/2572/main/l/Used-2019-Audi-RS-5-Sportback-29T-QUATTRO-BLACK-OPTIC-CARBON-FIBER-NAPPA-LEATHER-DYNAMIC-PLUS.jpg"
-              />
+              <img alt="tab-img1" className="tabs__img" src={porsche1} />
+              <img alt="tab-img2" className="tabs__img" src={porsche2} />
+              <img alt="tab-img3" className="tabs__img" src={porsche3} />
+              <img alt="tab-img4" className="tabs__img" src={porsche4} />
+              <img alt="tab-img5" className="tabs__img" src={porsche5} />
+              <img alt="tab-img6" className="tabs__img" src={porsche6} />
             </div>
             <div
               className={toggleTab === 2 ? "content active-content" : "content"}
@@ -142,4 +124,4 @@ function PersonalPage({ currentUser }) {
   );
 }
 
-export default PersonalPage;
+export default PorschePage;

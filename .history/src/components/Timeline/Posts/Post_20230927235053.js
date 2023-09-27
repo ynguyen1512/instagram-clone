@@ -13,25 +13,16 @@ const Post = ({ user, postImage, like, timestamp, avt }) => {
   const [isHoveredLike, setIsHoveredLike] = useState(false);
   const [isHoveredSave, setIsHoveredSave] = useState(false);
   const navigate = useNavigate();
-  const handleOnClick = (user) => {
-    if (user === "mercedesbenz") {
-      navigate("/mercedes");
-    } else if (user === "audi" || user === "audi_official") {
-      navigate("/audi");
-    } else if (user === "volvocars") {
-      navigate("/volvo");
-    } else if (user === "porsche") {
-      navigate("/porsche");
-    } else {
-      navigate("/personal");
-    }
+  const handleOnClick = () => {
+    navigate("/personal");
   };
 
   return (
     <div className="post">
       <div className="post__header">
-        <div className="post__headerAuthor" onClick={() => handleOnClick(user)}>
+        <div className="post__headerAuthor" onClick={handleOnClick}>
           <Avatar className="post__headerAvt" src={avt} />
+          <PersonalPage />
           {user} • <span>{timestamp}</span>
         </div>
 

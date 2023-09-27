@@ -12,61 +12,48 @@ import photo6 from "../../assets/img/audia7.jpg";
 import photo7 from "../../assets/img/volvo s90.jpg";
 import photo8 from "../../assets/img/McLaren_720S.jpg";
 import photo9 from "../../assets/img/audi-r8.jpg";
-
-import avtMer from "../../assets/img/mer-avt.jpg";
-import avtAudi from "../../assets/img/audi-logo.jpg";
-import avtPorsche from "../../assets/img/Porsche-Logo.png";
-import avtVolvo from "../../assets/img/volvo-logo.jpg";
 import Search from "../Search/Search";
-import { useNavigate } from "react-router";
 
 const Timeline = () => {
   const [posts, setPosts] = useState([
     {
       user: "mercedesbenz",
-      avt: process.env.PUBLIC_URL + avtMer,
       postImage: process.env.PUBLIC_URL + photo1,
       like: 12,
       timestamp: "2d",
     },
     {
       user: "audi",
-      avt: process.env.PUBLIC_URL + avtAudi,
       postImage: process.env.PUBLIC_URL + photo9,
       like: 12,
       timestamp: "2d",
     },
     {
       user: "mercedesbenz",
-      avt: process.env.PUBLIC_URL + avtMer,
       postImage: process.env.PUBLIC_URL + photo2,
       like: 22,
       timestamp: "2w",
     },
     {
       user: "porsche",
-      avt: process.env.PUBLIC_URL + avtPorsche,
       postImage: process.env.PUBLIC_URL + photo3,
       like: 52,
       timestamp: "2hrs",
     },
     {
       user: "audi_official",
-      avt: process.env.PUBLIC_URL + avtAudi,
       postImage: process.env.PUBLIC_URL + photo5,
       like: 52,
       timestamp: "2hrs",
     },
     {
       user: "audi",
-      avt: process.env.PUBLIC_URL + avtAudi,
       postImage: process.env.PUBLIC_URL + photo6,
       like: 52,
       timestamp: "2hrs",
     },
     {
       user: "volvocars",
-      avt: process.env.PUBLIC_URL + avtVolvo,
       postImage: process.env.PUBLIC_URL + photo7,
       like: 52,
       timestamp: "2hrs",
@@ -132,11 +119,6 @@ const Timeline = () => {
 
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [storyUserToShow, setStoryUserToShow] = useState(4);
-  // const navigate = useNavigate();
-  // const handleNavigatePage = (username) => {
-  //   const profileURL = `/${username}Page`;
-  //   navigate(profileURL);
-  // };
 
   useEffect(() => {
     const handleResize = () => {
@@ -172,7 +154,6 @@ const Timeline = () => {
           {posts.map((post) => (
             <Post
               key={post.user}
-              avt={post.avt}
               user={post.user}
               postImage={post.postImage}
               like={post.like}
@@ -189,7 +170,7 @@ const Timeline = () => {
           />
         )}
         <Profile />
-        <Suggestion users={users} setUsers={setUsers} />
+        <Suggestion users={users} />
       </div>
     </div>
   );

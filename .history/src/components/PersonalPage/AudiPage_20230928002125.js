@@ -10,7 +10,7 @@ import PhotoCameraFrontOutlinedIcon from "@mui/icons-material/PhotoCameraFrontOu
 import { Helmet } from "react-helmet";
 import avt from "../../assets/img/jason.jpg";
 
-function PersonalPage({ currentUser }) {
+function AudiPage() {
   const [toggleTab, setToggleTab] = useState(1);
 
   const handleToggleTab = (index) => {
@@ -142,4 +142,4 @@ function PersonalPage({ currentUser }) {
   );
 }
 
-export default PersonalPage;
+export default AudiPage;

@@ -132,11 +132,11 @@ const Timeline = () => {
 
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [storyUserToShow, setStoryUserToShow] = useState(4);
-  // const navigate = useNavigate();
-  // const handleNavigatePage = (username) => {
-  //   const profileURL = `/${username}Page`;
-  //   navigate(profileURL);
-  // };
+  const navigate = useNavigate();
+  const handleNavigatePage = (username) => {
+    const profileURL = `/${username}Page`;
+    navigate(profileURL);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -177,6 +177,7 @@ const Timeline = () => {
               postImage={post.postImage}
               like={post.like}
               timestamp={post.timestamp}
+              onClick={() => handleNavigatePage(post.user)}
             />
           ))}
         </div>

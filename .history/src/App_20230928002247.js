@@ -11,8 +11,6 @@ import Explore from "./components/Explore/Explore";
 import Reels from "./components/Reels/Reels";
 import MercedesPage from "./components/PersonalPage/MercedesPage";
 import AudiPage from "./components/PersonalPage/AudiPage";
-import VolvoPage from "./components/PersonalPage/VolvoPage";
-import PorschePage from "./components/PersonalPage/PorschePage";
 function App() {
   return (
     <div className="app">
@@ -22,8 +20,6 @@ function App() {
           <Route path="/personal" element={<PersonalPage />} />
           <Route path="/mercedes" element={<MercedesPage />} />
           <Route path="/audi" element={<AudiPage />} />
-          <Route path="/volvo" element={<VolvoPage />} />
-          <Route path="/porsche" element={<PorschePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup2 />} />
           <Route path="/inbox" element={<Message />} />

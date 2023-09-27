@@ -8,30 +8,17 @@ import ModeCommentOutlinedIcon from "@mui/icons-material/ModeCommentOutlined";
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import BookmarkOutlinedIcon from "@mui/icons-material/BookmarkOutlined";
 import { useState } from "react";
-import { useNavigate } from "react-router";
 const Post = ({ user, postImage, like, timestamp, avt }) => {
   const [isHoveredLike, setIsHoveredLike] = useState(false);
   const [isHoveredSave, setIsHoveredSave] = useState(false);
-  const navigate = useNavigate();
-  const handleOnClick = (user) => {
-    if (user === "mercedesbenz") {
-      navigate("/mercedes");
-    } else if (user === "audi" || user === "audi_official") {
-      navigate("/audi");
-    } else if (user === "volvocars") {
-      navigate("/volvo");
-    } else if (user === "porsche") {
-      navigate("/porsche");
-    } else {
-      navigate("/personal");
-    }
-  };
 
   return (
     <div className="post">
       <div className="post__header">
-        <div className="post__headerAuthor" onClick={() => handleOnClick(user)}>
+        <div className="post__headerAuthor">
           <Avatar className="post__headerAvt" src={avt} />
+          {/* {user.charAt(0).toUpperCase()}
+          </Avatar> */}
           {user} • <span>{timestamp}</span>
         </div>
 

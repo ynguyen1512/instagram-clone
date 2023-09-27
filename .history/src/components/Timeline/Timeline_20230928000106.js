@@ -132,11 +132,12 @@ const Timeline = () => {
 
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [storyUserToShow, setStoryUserToShow] = useState(4);
-  // const navigate = useNavigate();
-  // const handleNavigatePage = (username) => {
-  //   const profileURL = `/${username}Page`;
-  //   navigate(profileURL);
-  // };
+  const navigate = useNavigate();
+  const handleNavigatePage = () => {
+    if (posts.user == "mercedesbenz") {
+      navigate("/mercedesbenzPage");
+    }
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -168,7 +169,7 @@ const Timeline = () => {
             <Story avatar={story.avatar} userName={story.userName} />
           ))}
         </div>
-        <div className="timeline__posts">
+        <div className="timeline__posts" onClick={handleNavigatePage}>
           {posts.map((post) => (
             <Post
               key={post.user}

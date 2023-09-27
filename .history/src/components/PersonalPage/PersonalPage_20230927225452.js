@@ -10,7 +10,7 @@ import PhotoCameraFrontOutlinedIcon from "@mui/icons-material/PhotoCameraFrontOu
 import { Helmet } from "react-helmet";
 import avt from "../../assets/img/jason.jpg";
 
-function PersonalPage({ currentUser }) {
+function PersonalPage(props) {
   const [toggleTab, setToggleTab] = useState(1);
 
   const handleToggleTab = (index) => {
@@ -136,6 +136,7 @@ function PersonalPage({ currentUser }) {
               <span className="content__desc">No Photos</span>
             </div>
           </div>
+          {/* tab ui */}
         </div>
       </div>
     </>

@@ -18,7 +18,7 @@ import avtAudi from "../../assets/img/audi-logo.jpg";
 import avtPorsche from "../../assets/img/Porsche-Logo.png";
 import avtVolvo from "../../assets/img/volvo-logo.jpg";
 import Search from "../Search/Search";
-import { useNavigate } from "react-router";
+import PersonalPage from "../PersonalPage/PersonalPage";
 
 const Timeline = () => {
   const [posts, setPosts] = useState([
@@ -130,13 +130,14 @@ const Timeline = () => {
     },
   ]);
 
+  const [currentUser] = useState("Mercedes");
+  const handleProfileAvatarClick = () => {
+    // Navigate to PersonalPage and pass the currentUser prop
+    navigate("/personal", { state: { currentUser } });
+  };
+
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [storyUserToShow, setStoryUserToShow] = useState(4);
-  // const navigate = useNavigate();
-  // const handleNavigatePage = (username) => {
-  //   const profileURL = `/${username}Page`;
-  //   navigate(profileURL);
-  // };
 
   useEffect(() => {
     const handleResize = () => {
@@ -188,8 +189,8 @@ const Timeline = () => {
             isSearchVisible={isSearchVisible}
           />
         )}
-        <Profile />
-        <Suggestion users={users} setUsers={setUsers} />
+        <Profile onProfileAvatarClick={handleProfileAvatarClick} />
+        <Suggestion users={users} />
       </div>
     </div>
   );
