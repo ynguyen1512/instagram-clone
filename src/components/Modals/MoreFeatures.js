@@ -29,7 +29,7 @@ function MoreFeatures({ isMoreVisible }) {
         </button>
         <button className="more-features__button">
           <KeyboardAltOutlinedIcon />
-          <span>Keyboard shortcuts</span>
+          <span>Keyboard</span>
         </button>
         <button className="more-features__button">
           <ModeNightOutlinedIcon />

@@ -5,9 +5,14 @@ import KeyboardAltOutlinedIcon from "@mui/icons-material/KeyboardAltOutlined";
 import ModeNightOutlinedIcon from "@mui/icons-material/ModeNightOutlined";
 import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
 import "./MoreFeatures.scss";
+import { useNavigate } from "react-router";
 
 function MoreFeatures({ isMoreVisible }) {
-  return (
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/login");
+  };
+  return isMoreVisible ? (
     <div className="more-features-wrapper">
       <div className="more-features-buttons">
         <button className="more-features__button">
@@ -24,7 +29,7 @@ function MoreFeatures({ isMoreVisible }) {
         </button>
         <button className="more-features__button">
           <KeyboardAltOutlinedIcon />
-          <span>Keyboard shortcuts</span>
+          <span>Keyboard</span>
         </button>
         <button className="more-features__button">
           <ModeNightOutlinedIcon />
@@ -34,10 +39,13 @@ function MoreFeatures({ isMoreVisible }) {
           <ErrorOutlineOutlinedIcon />
           <span>Report a problem</span>
         </button>
+        <button onClick={handleNavigate} className="more-features__button">
+          <span>Log out</span>
+        </button>
       </div>
-      <button className="logout-btn">Log out</button>
+      {/* <button className="logout-btn"></button> */}
     </div>
-  );
+  ) : null;
 }
 
 export default MoreFeatures;
