@@ -12,3 +12,12 @@
     flex: 0.8;
   }
 }
+
+@media (max-width: $breakpoint-medium) {
+  .homepage {
+    display: flex;
+    .homepage__nav {
+      bottom: 0;
+    }
+  }
+}

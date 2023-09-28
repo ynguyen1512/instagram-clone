@@ -9,7 +9,6 @@
   height: 80%;
   .personal-left {
     // flex: 0.6;
-    width: 186px;
     // margin-right: 600px;
   }
 
@@ -26,7 +25,7 @@
     }
     .personal-info-wrapper {
       margin-left: 60px;
-      width: 430px;
+
       .personal-row1 {
         display: flex;
         align-items: center;
@@ -75,7 +74,7 @@
     }
     .subnav {
       margin-top: 40px;
-      // border-top: 1px solid #262626;
+      border-top: 1px solid #262626;
       font-size: 12px;
       width: 800px;
       display: flex;
@@ -179,7 +178,9 @@
       width: 82px;
     }
     .personal-right {
-      width: 0; // Adjust to take the full width minus the left panel width
+      width: calc(
+        100% - 82px
+      ); // Adjust to take the full width minus the left panel width
       // overflow-x: hidden;
       .personal__avt {
         margin-top: 20px;

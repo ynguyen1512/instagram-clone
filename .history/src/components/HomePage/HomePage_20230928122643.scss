@@ -1,0 +1,30 @@
+@import "../../Base.scss";
+
+.homepage {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  .homepage__nav {
+    flex: 0.2;
+  }
+  .homepage__timeline {
+    flex: 0.8;
+  }
+}
+
+@media (max-width: $breakpoint-medium) {
+  .homepage {
+    flex-direction: column; // Stack children vertically
+
+    .homepage__nav {
+      position: sticky;
+      bottom: 0;
+      width: 100%; // Stretch it full width if required
+    }
+
+    .homepage__timeline {
+      flex: 1; // Consume available space to push nav to the bottom
+    }
+  }
+}

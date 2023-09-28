@@ -56,7 +56,7 @@ function PersonalPage() {
             </div>
           </div>
           {/* Post, saved, tagged */}
-          {/* <hr style={{ color: "#ccc" }} /> */}
+          <hr />
           <div className="subnav">
             <div
               className={

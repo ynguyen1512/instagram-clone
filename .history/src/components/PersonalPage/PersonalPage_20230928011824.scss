@@ -9,7 +9,6 @@
   height: 80%;
   .personal-left {
     // flex: 0.6;
-    width: 186px;
     // margin-right: 600px;
   }
 
@@ -26,7 +25,7 @@
     }
     .personal-info-wrapper {
       margin-left: 60px;
-      width: 430px;
+
       .personal-row1 {
         display: flex;
         align-items: center;
@@ -75,7 +74,7 @@
     }
     .subnav {
       margin-top: 40px;
-      // border-top: 1px solid #262626;
+      border-top: 1px solid #262626;
       font-size: 12px;
       width: 800px;
       display: flex;
@@ -171,82 +170,19 @@
 
 @media (max-width: $breakpoint-medium) {
   .personal-wrapper {
-    width: 100%; // Adjust the wrapper width to 100% of the viewport
-    max-width: 100%; // Make sure it doesn't overflow
-    // margin: 0 auto; // Center the content if needed
-
-    .personal-left {
-      width: 82px;
-    }
     .personal-right {
-      width: 0; // Adjust to take the full width minus the left panel width
-      // overflow-x: hidden;
       .personal__avt {
-        margin-top: 20px;
-        margin-left: -380px;
-        width: 90px;
-        height: 90px;
+        margin-left: -370px;
+        width: 120px;
+        height: 120px;
       }
       .personal-info-wrapper {
-        margin-left: -480px;
-        width: 363px;
-        .personal-row1 {
-          .personal-info {
-            display: flex;
-            align-items: center;
-            .personal__name {
-              font-size: 14px;
-            }
-            .personal__edit-btn {
-              padding: 3px 15px;
-            }
-            .personal__view-btn {
-              padding: 3px 15px;
-            }
-          }
-        }
-        .personal-row2 {
-          .personal__post {
-            font-size: 14px;
-          }
-          .personal__followers {
-            font-size: 14px;
-          }
-          .personal__following {
-            font-size: 14px;
-          }
-        }
-        .personal-row3 {
+        margin-left: -420px;
+        .personal__name {
           font-size: 14px;
         }
-      }
-      .subnav {
-        margin-left: -380px;
-        .subnav__posts {
-          margin-left: -350px;
-        }
-      }
-      .personal-content-tabs {
-        margin-left: -375px;
-        // margin: 0; // Adjust margins to align content appropriately
-        padding: 0 10px; // You can add padding if needed
-        // width: 50%;
-        width: 300px;
-        .content {
-          &.active-content {
-            display: grid !important;
-            grid-template-columns: 200px 200px;
-            .tabs__img {
-              width: 195px;
-              height: 200px;
-            }
-            .content__icon {
-              margin-left: 165px;
-            }
-            .content__desc {
-              margin-left: -70px;
-            }
-          }
+        .personal__edit-btn {
+          padding: 3px 15px;
         }
       }
     }
